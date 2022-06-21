@@ -3,8 +3,10 @@ package com.example.srv.dao;
 import com.example.srv.bo.Book;
 import com.example.srv.bo.BookExample;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+@Mapper
 public interface BookMapper {
     long countByExample(BookExample example);
 
