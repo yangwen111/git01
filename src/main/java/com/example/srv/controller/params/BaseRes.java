@@ -1,4 +1,4 @@
-package com.example.srv.controller;
+package com.example.srv.controller.params;
 
 import lombok.Data;
 

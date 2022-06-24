@@ -24,11 +24,24 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public List<Book> finfBook(String name) {
+    public List<Book> findBook(String name) {
         BookExample example=new BookExample();
         BookExample.Criteria criteria = example.createCriteria();
         criteria.andNameLike(name);
         List<Book> books = bookMapper.selectByExample(example);
         return books;
+    }
+
+    @Override
+    public List<Book> delBook(Integer id) {
+        bookMapper.deleteByPrimaryKey(id);
+        List<Book> books = bookList();
+        return books;
+    }
+
+    @Override
+    public Book oneBook(Integer id) {
+        Book book = bookMapper.selectByPrimaryKey(id);
+        return book;
     }
 }

@@ -1,6 +1,6 @@
 package com.example.srv.handler;
 
-import com.example.srv.controller.BaseRes;
+import com.example.srv.controller.params.BaseRes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
