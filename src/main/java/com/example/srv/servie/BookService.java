@@ -35,4 +35,8 @@ public interface BookService {
      * @return
      */
     Book oneBook(Integer id);
+
+    int changeBook(Book book);
+
+    int addBook(Book book);
 }

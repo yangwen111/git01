@@ -45,4 +45,18 @@ public class BookController {
         baseRes.setResult(book);
         return baseRes;
     }
+    @PostMapping("/changeBook")
+    public BaseRes<Integer>  changeBook(@RequestBody Book book){
+        BaseRes<Integer> baseRes=new BaseRes<Integer>();
+        int i = bookService.changeBook(book);
+        baseRes.setResult(i);
+        return baseRes;
+    }
+    @PostMapping("/addBook")
+    public BaseRes<Integer>  addBook(@RequestBody Book book){
+        BaseRes<Integer> baseRes=new BaseRes<Integer>();
+        int i = bookService.addBook(book);
+        baseRes.setResult(i);
+        return baseRes;
+    }
 }

@@ -44,4 +44,16 @@ public class BookServiceImpl implements BookService {
         Book book = bookMapper.selectByPrimaryKey(id);
         return book;
     }
+
+    @Override
+    public int changeBook(Book book) {
+        int i = bookMapper.updateByPrimaryKeySelective(book);
+        return i;
+    }
+
+    @Override
+    public int addBook(Book book) {
+        int insert = bookMapper.insert(book);
+        return insert;
+    }
 }
