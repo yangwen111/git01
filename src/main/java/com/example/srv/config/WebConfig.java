@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.*;
  */
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
-    private final static String exclude[]={"/img/**"};
+    private final static String exclude[]={"/img/**","/user/login"};
     static final String ORIGINS[] = new String[] { "GET", "POST", "PUT", "DELETE" };
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -25,7 +25,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         WebMvcConfigurer.super.addViewControllers(registry);
-        registry.addViewController("/").setViewName("login.html");
+//        registry.addViewController("/").setViewName("login.html");
     }
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
