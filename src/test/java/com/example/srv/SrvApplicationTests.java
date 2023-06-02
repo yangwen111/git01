@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
 import java.util.List;
-
+// 主程序
 @SpringBootTest
 class SrvApplicationTests {
     @Resource
